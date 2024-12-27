@@ -279,10 +279,6 @@ Choose the phrasing that best fits the overall tone and level of detail in your 
 - Deploying the Flask app to a hosting platform allows you to make your hand sign recognition project accessible online. Anyone with an internet connection could then access your web interface through a specific URL.
 - Popular hosting platforms for Flask applications include Heroku, PythonAnywhere, and AWS Elastic Beanstalk. Each platform has its own deployment process and pricing structure.
 
-### Deployment (Optional)
-
-- Deploying the Flask app to a hosting platform allows you to make your hand sign recognition project accessible online. Anyone with an internet connection could then access your web interface through a specific URL.
-- Popular hosting platforms for Flask applications include Heroku, PythonAnywhere, and AWS Elastic Beanstalk. Each platform has its own deployment process and pricing structure.
 
 ### Benefits of Flask Integration
 

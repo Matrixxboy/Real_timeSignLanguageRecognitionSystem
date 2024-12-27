@@ -28,13 +28,13 @@ Important Notes (Recommended Versions and Setup):
 For optimal performance and to avoid potential compatibility issues, it is highly recommended to use the following software 
 
 ### versions:
-- `Python: 3.11.0`
-- `TensorFlow: 2.12.0`
-- `Keras: 2.12.0`
-- `NumPy: 1.23.5`
-- `opencv-python: 4.10.0.84`
-- `Flask: 2.3.2`
-- `Jinja2: 3.1.2`
+- ![Python 3.11.0](https://img.shields.io/badge/python-3.11.0-blue)
+- ![TensorFlow 2.12.0](https://img.shields.io/badge/tensorflow-2.12.0-orange)
+- ![Keras 2.12.0](https://img.shields.io/badge/keras-2.12.0-blueviolet)
+- ![NumPy 1.23.5](https://img.shields.io/badge/numpy-1.23.5-blue)
+- ![opencv-python 4.10.0.84](https://img.shields.io/badge/opencv--python-4.10.0.84-green)
+- ![Flask 2.3.2](https://img.shields.io/badge/flask-2.3.2-blue)
+- ![Jinja2 3.1.2](https://img.shields.io/badge/jinja2-3.1.2-blueviolet)
 
 It's also strongly advised to create a virtual environment to manage project dependencies and prevent conflicts with other Python projects on your system. This isolates the project's required libraries. You can create one using these commands (in your project directory):
 

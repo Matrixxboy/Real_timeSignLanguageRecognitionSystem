@@ -67,14 +67,14 @@ This guide explains how to set up and run a hand sign recognition project using 
 - Replace <your_username> with your actual GitHub username in the following command:
 
 ```bash
-git clone https://github.com/<your_username>/hand-sign-recognition.git
+git clone https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem.git
 ```
 This will download the project files from your GitHub repository to your local machine.
 
 2.	**Install Dependencies**:
 - Navigate to the project directory using the following command:
 ```bash
-cd hand-sign-recognition
+cd Real_timeSignLanguageRecognitionSystem
 ```
 
 - If you haven't already, make sure you've activated your virtual environment (see "Important Notes" above).

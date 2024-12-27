@@ -111,7 +111,8 @@ python main.py
 This will launch a web server(http://127.0.0.1:5000/), allowing you to upload images or use your webcam for real-time hand sign prediction.
 
 6.	**Example Usage (Prediction)**:
-Once you've trained the model, you can use the predict.py script for hand sign detection:
+Once you've trained the model, you can use the main.py script for hand sign detection:
+
 Prediction from an image:
 
 ```bash

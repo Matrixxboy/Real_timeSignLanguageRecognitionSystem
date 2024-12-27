@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Shared styles from index.html */
+        body {
+            padding: 0;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #212529;
+            color: #e0e0e0;
+        }
+        a {
+            text-decoration: none; /* Removes underlines */
+            color: inherit; /* Inherits the color from the parent element */
+        }
+
+        a:hover {
+            text-decoration: none; /* Removes underlines on hover as well */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            padding: 1rem;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .navbar ul li {
+            padding: 0 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar ul li.active {
+            font-weight: bold; /* Highlight the active link */
+        }
+
+        .navbar ul li:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar ul li:hover:after {
+            transform: scaleX(1);
+        }
+
+        footer {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            margin-top: auto;
+            box-sizing: border-box;
+        }
+
+        footer .footer-links {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #d0d0d0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        footer .copyright {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* About_project.html specific styles */
+        .main-content {
+            padding-top: 80px; /* Adjust padding for navbar */
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto; /* Center the content */
+        }
+
+        h1, h2, h3 {
+            color: #fff;
+            text-align: center;
+        }
+
+        .about-project-content {
+            padding: 2rem;
+            text-align: justify;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar ul {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .navbar ul li {
+                padding: 0.5rem 1rem;
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .main-content {
+                padding-top: 120px; /* Adjust padding for stacked navbar */
+            }
+
+            footer .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about_project') }}">About Project</a></li>
+                <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="about-project-content">
+            <h1><strong>Project Title:</strong> Real-time Sign Language Recognition System</h1>
+            <br>
+            <br>
+            <h2>Project Description</h2>
+            <p>This project aims to develop a web-based system for real-time sign language gesture recognition using a webcam. It leverages the power of Python and its libraries (TensorFlow, OpenCV, NumPy, etc.) to achieve this goal.</p>
+            <br>
+            <br>
+            <ul><h3>Key Technologies</h3>
+                <li><strong>Python:</strong> The primary programming language used for building the system.
+                </li>
+                <li><strong>TensorFlow:</strong> A popular deep learning framework employed for training the gesture recognition model.
+                </li>
+                <li><strong>OpenCV:</strong> A computer vision library used for webcam access, image processing, and hand detection.</li>
+                <li><strong>NumPy:</strong> A powerful library for numerical computations and array manipulation.
+                </li>
+                <li><strong>Flask:</strong> A lightweight web framework used to create the web interface for streaming video and displaying recognized gestures.
+                </li>
+            </ul>
+            <br>
+            <br>
+            <ol><h3>System Functionality</h3>
+                <li><strong><h6>Data Collection</h6></strong>
+                    <ul>
+                        <li>Users capture their hand gestures using a webcam.</li>
+                        <li>Captured images are pre-processed and stored in a designated folder for training the model.</li>
+                    </ul>
+                </li>
+                <li><strong><h6>Model Training (Separate Script)</h6></strong>
+                    <ul>
+                        <li>Pre-processed hand gesture images are used to train a deep learning model using TensorFlow.</li>
+                        <li>The trained model is saved for future use in real-time recognition.</li>
+                    </ul>
+                </li>
+                <li><strong><h6>Real-time Recognition (Flask Web App)</h6></strong>
+                    <ul>
+                        <li>Users access the web interface through a browser.</li>
+                        <li>The webcam stream is accessed through the Flask application.</li>
+                        <li>OpenCV is used to detect hands in the video frames.</li>
+                        <li>The detected hand region is pre-processed and resized for compatibility with the trained model.</li>
+                        <li>The trained TensorFlow model predicts the sign language gesture based on the pre-processed hand image.</li>
+                        <li>The recognized gesture label is displayed on the web interface alongside the video stream.</li>
+                    </ul>
+                </li>
+            </ol>
+            <br>
+            <br>
+            <ul><h3>Benefits</h3>
+                <li>Real-time sign language translation enhances communication between hearing and hearing-impaired individuals.</li>
+                <li>The web interface allows for accessibility from any device with a web browser.</li>
+                <li>User-generated training data enables customization and continuous improvement of the system.</li>
+            </ul>
+            <br>
+            <br>
+            <ul><h3>Future Enhancement</h3>
+                <li>Expand the gesture library to recognize a broader range of signs.</li>
+                <li>Incorporate voice synthesis to convert the recognized sign language gesture into spoken language.</li>
+                <li>Implement a user interface for uploading pre-recorded sign language videos for recognition.</li>
+            </ul>
+        </section>
+    </main>
+  <footer>
+        <div class="footer-links">
+            <a href="{{ url_for('about_project') }}">About Project</a>
+            <a href="{{ url_for('about_us') }}">About Us</a>
+        </div>
+        <div class="copyright">
+            &copy; {{ year }} NexGen Club. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,6 +1,4 @@
 
-![Visitor Count](https://profile-counter.glitch.me/Matrixxboy/count.svg)
-
 # Hand Sign Recognition
 
 **Description**

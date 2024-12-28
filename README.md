@@ -165,7 +165,9 @@ A neural network is a computational model inspired by the structure and function
 
 1. **Neurons (Nodes)**: The basic units of a neural network. Each neuron receives input signals, performs a simple computation, and produces an output signal.
 
-![alt text](https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/neurons(nodes).jpg?raw=true)
+<p align="center">
+  <img width="460" height="280" src="https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/neurons(nodes).jpg?raw=true">
+</p>
 
   - **Inputs (x1, x2, x3)**: Values received from other neurons or external sources.
   - **Weights (w1, w2, w3)**: Represent the strength of each input connection.
@@ -181,7 +183,9 @@ A neural network is a computational model inspired by the structure and function
   - **Hidden Layers**: Intermediate layers that perform computations and extract features from the input. A network can have multiple hidden layers (deep learning).
   - **Output Layer**: Produces the final result (e.g., probabilities for different hand sign classes).
 
-![alt text](https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/layers.png?raw=true)
+<p align="center">
+  <img width="460" height="370" src="https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/layers.png?raw=true">
+</p>
 ## How Neural Networks Learn (Training)
 
 1.	**Forward Propagation**: Input data is passed through the network, layer by layer, until it reaches the output layer.
@@ -197,18 +201,24 @@ A neural network is a computational model inspired by the structure and function
   - Pooling Layers: Reduce the spatial dimensions of the feature maps, reducing the number of parameters and computations.
   - Fully Connected Layers: Perform high-level reasoning and classification based on the extracted features.
 
-![alt text](https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/The-structure-of-a-CNN-consisting-of-convolutional-pooling-and-fully-connected-layers.png?raw=true)
+<p align="center">
+  <img width="500" height="270" src="https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/The-structure-of-a-CNN-consisting-of-convolutional-pooling-and-fully-connected-layers.png?raw=true">
+</p>
 
 ## Why Square Images for Neural Networks (Especially CNNs)?
 
 While not strictly required in all cases, square images are often preferred for several reasons, particularly in the context of CNNs and when using tools like TensorFlow/Keras:
 1.	**Consistency in Convolutional Operations**: Convolutional layers use square filters (kernels) to scan the image. Using square input images ensures that the filters operate consistently across both dimensions. This simplifies the computations and the architecture of the network.
- 
-![alt text](https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/Screenshot%202024-1.png?raw=true)
+
+ <p align="center">
+  <img width="460" height="400" src="https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/Screenshot%202024-1.png?raw=true">
+</p>
 
 2.	**Simplifying Resizing/Preprocessing**: If you have images of varying aspect ratios, you need to resize or pad them to a consistent size before feeding them to the network. Resizing to a square shape is the simplest and most common approach. It avoids distortions that might occur when resizing to non-square dimensions.
- 
-![alt text](https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/Screenshot%202024-12.png?raw=true)
+
+ <p align="center">
+  <img width="260" height="260" src="https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/Screenshot%202024-12.png?raw=true">
+</p>
 
 
 3.	**Compatibility with Pre-trained Models (Not Applicable)**:Since this project uses a custom-built model, pre-trained model compatibility is not a concern. Square inputs are still preferred for other reasons.
@@ -216,7 +226,9 @@ Choose the phrasing that best fits the overall tone and level of detail in your 
 
 4.	**Avoiding Distortion**: Non-square resizing can distort the image, making objects appear stretched or compressed. This can negatively impact the performance of the model, especially if shape is a crucial feature for recognition.
 
-![alt text](https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/Screenshot%202024-3.png?raw=true)
+<p align="center">
+  <img width="260" height="260" src="https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/Screenshot%202024-3.png?raw=true">
+</p>
 
 ## Training Process (Trainable Machine)
 

@@ -152,7 +152,7 @@ This will activate your webcam and display the predicted hand sign in real-time.
 - **Convolutional Neural Networks (CNNs)**: A type of neural network particularly adept at processing image data. CNNs learn features directly from images by applying filters (kernels) to extract patterns and progressively build higher-level representations.
 
 <p align="center">
-![alt text](https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/Convolutional%20Neural%20Networks_CNNs.jpg?raw=true)
+  <img width="460" height="250" src="https://github.com/Matrixxboy/Real_timeSignLanguageRecognitionSystem/blob/main/images/Convolutional%20Neural%20Networks_CNNs.jpg?raw=true">
 </p>
 
 # Neural Networks: The Core of this Project

@@ -1,0 +1,49 @@
+graph TD
+    A[Start] --> B["Initialize Flask App"]
+    B --> C["Define process_frame()"]
+    C --> D["Define generate_frames()"]
+    D --> E["Define Flask Routes"]
+    E --> F["Run App (if __name__ == '__main__')"]
+
+    subgraph process_frame
+        C1["Input"]:::PFInput --> C2["Copy"]:::PFCopy
+        C2 --> C3{"Detect Hands?"}:::PFDetect
+        C3 -- Yes --> C4["Extract Box"]:::PFExtract
+        C3 -- No --> C15["Return Orig"]:::PFReturn
+        C4 --> C5["Create White"]:::PFWhite
+        C5 --> C6["Crop"]:::PFCrop
+        C6 --> C7{"Image Empty?"}:::PFEmpty
+        C7 -- Yes --> C15
+        C7 -- No --> C8["Calc Ratio"]:::PFRatio
+        C8 --> C9{"Ratio > 1?"}:::PFCheckRatio
+        C9 -- Yes --> C10["Resize H"]:::PFResizeH
+        C9 -- No --> C11["Resize W"]:::PFResizeW
+        C10 --> C12["Center H"]:::PFCenterH
+        C11 --> C13["Center V"]:::PFCenterV
+        C12 --> C14["Predict & Draw"]:::PFPredict
+        C13 --> C14
+        C14 --> C16["Return Proc"]:::PFProc
+    end
+
+    subgraph generate_frames
+        D1["Open Webcam"]:::GFOpen --> D2{"Webcam Open?"}:::GFOpenCheck
+        D2 -- No --> D12["Yield & Return"]:::GFYieldReturn
+        D2 -- Yes --> D3["Set Dims"]:::GFDims
+        D3 --> D4["Init Det/Class"]:::GFInit
+        D4 --> D5{"Init Success?"}:::GFInitCheck
+        D5 -- No --> D13["Rel, Yield & Ret"]:::GFRelYieldRet
+        D5 -- Yes --> D6["Loop: Read"]:::GFReadLoop
+        D6 --> D7{"Read Success?"}:::GFReadCheck
+        D7 -- No --> D8["Reconnect Cam"]:::GFReconnect
+        D8 --> D9{"Recon Success?"}:::GFReconCheck
+        D9 -- No --> D11["Break"]:::GFBreak
+        D9 -- Yes --> D6
+        D7 -- Yes --> D10["Process Frame"]:::GFProcess
+        D10 --> D14["Calc & Show FPS"]:::GFFPS
+        D14 --> D15["Encode JPEG"]:::GFEncode
+        D15 --> D16["Yield Frame"]:::GFYield
+        D16 --> D6
+        D11 --> D17["Release Cam"]:::GFRelease
+    end
+
+    F --> G[End]

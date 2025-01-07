@@ -115,7 +115,7 @@ Once you've trained the model, you can use the main.py script for hand sign dete
 
 Prediction from an image:
 
-```bash
+```python
 prediction, index = classifier.getPrediction(img_white, draw=False)  # Classify the hand gesture
 label = labels[index]  # Get the label corresponding to the predicted index
 print(f"Detection: Label Index = {index}, Label Name = {label}")
@@ -127,7 +127,7 @@ with open("Final_Model/AtoZ.txt", 'r') as f: #open   file
 ```
 
 Prediction from webcam:
- ```bash
+ ```python
 detector = HandDetector(maxHands=1)  # Initialize hand detector
 classifier = Classifier("Final_Model/AtoZ.h5", "Final_Model/AtoZ.txt") # Initialize classifier
 with open("Final_Model/AtoZ.txt", 'r') as f: #open   file

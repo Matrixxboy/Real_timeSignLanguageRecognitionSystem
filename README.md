@@ -94,7 +94,7 @@ python final_data_collection.py
 This script will likely guide you through performing specific hand gestures in front of your webcam. The captured images will be saved in separate folders for each sign class, making it easier to train the model on each sign. 
 
 You can modify the following code to save captured data to custom folders.
-``` bash
+```python
 folder = "Data/Alphabates/S"
 ```
 

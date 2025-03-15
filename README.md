@@ -22,7 +22,7 @@ This project implements hand sign recognition using Python and deep learning tec
 - **final_data_collection.py**: Captures hand sign images for training and prediction.
 - **main.py**: Predicts hand signs from new images or a webcam stream.
 - **AtoZ.h5**: Saves the trained CNN model for future use.
-- **README.md**: This file (you're editing it now!).
+- **README.md**: This file (you're Reading it now!).
 - **(Optional) main.py**: Flask application code (if deploying as a web app).
 
 ## Setup

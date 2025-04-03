@@ -1,26 +1,35 @@
-graph TD
-    A[User] -->|Provides Hand Gesture| B[Webcam]
-    B --> |Captures Frame| C[Preprocessing]
-    
-    subgraph Preprocessing
-        C1[Resize & Normalize] --> C2[Hand Detection]
-        C2 -->|Extracted Hand| C3[Feature Extraction]
-        C3 -->|Processed Image| C4[Forward to Model]
-    end
-    
-    C4 --> D[Deep Learning Model]
-    
-    subgraph Model Processing
-        D1[CNN Model] -->|Prediction| D2[Classification]
-        D2 -->|Recognized Sign| D3[Confidence Score Calculation]
-    end
-    
-    D3 -->|Result| E[Flask Web App]
-    
-    subgraph Web App & Display
-        E1[Render Web Page] --> E2[Show Prediction]
-        E2 -->|Feedback| E3[User Interaction]
-    end
-    
-    E3 -->|Store Data| F[Database]
-    F -->|Provides Data| D1
+---
+config:
+  layout: fixed
+---
+flowchart TD
+ subgraph Preprocessing["Preprocessing"]
+        C2["Hand Detection"]
+        C1["Resize & Normalize"]
+        C3["Feature Extraction"]
+        C4["Forward to Model"]
+  end
+ subgraph subGraph1["Model Processing"]
+        D2["Classification"]
+        D1["CNN Model"]
+        D3["Confidence Score Calculation"]
+  end
+ subgraph subGraph2["Web App & Display"]
+        E2["Show Prediction"]
+        E1["Render Web Page"]
+        E3["User Interaction"]
+  end
+    A["User"] -- Provides Hand Gesture --> B["Webcam"]
+    B -- Captures Frame --> C["Preprocessing"]
+    C1 --> C2
+    C2 -- Extracted Hand --> C3
+    C3 -- Processed Image --> C4
+    C4 --> D["Deep Learning Model"]
+    D1 -- Prediction --> D2
+    D2 -- Recognized Sign --> D3
+    D3 -- Result --> E["Flask Web App"]
+    E1 --> E2
+    E2 -- Feedback --> E3
+    E3 -- Store Data --> F["Database"]
+    n1[" "] --> subGraph1
+    n1@{ shape: anchor}

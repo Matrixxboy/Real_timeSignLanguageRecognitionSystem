@@ -1,0 +1,26 @@
+graph TD
+    A[User] -->|Provides Hand Gesture| B[Webcam]
+    B --> |Captures Frame| C[Preprocessing]
+    
+    subgraph Preprocessing
+        C1[Resize & Normalize] --> C2[Hand Detection]
+        C2 -->|Extracted Hand| C3[Feature Extraction]
+        C3 -->|Processed Image| C4[Forward to Model]
+    end
+    
+    C4 --> D[Deep Learning Model]
+    
+    subgraph Model Processing
+        D1[CNN Model] -->|Prediction| D2[Classification]
+        D2 -->|Recognized Sign| D3[Confidence Score Calculation]
+    end
+    
+    D3 -->|Result| E[Flask Web App]
+    
+    subgraph Web App & Display
+        E1[Render Web Page] --> E2[Show Prediction]
+        E2 -->|Feedback| E3[User Interaction]
+    end
+    
+    E3 -->|Store Data| F[Database]
+    F -->|Provides Data| D1
